@@ -1,0 +1,66 @@
+#include<iostream>
+#include<string.h>
+using namespace std;
+int main(){
+char pass[20], ePass[20]; int
+numOne, numTwo, sum;
+cout<<"Create a Password: ";
+cin>>pass;
+cout<<"\nEnter Two Numbers to Add: ";
+cin>>numOne>>numTwo;
+cout<<"\nEnter the Password to See the Result: “;
+cin>>ePass;
+if(!strcmp(pass, ePass)){
+sum = numOne + numTwo;
+cout<<endl<<numOne<<" + "<<numTwo<<" = "<<sum;
+}else
+cout<<"\nSorry! You've entered a Wrong Password!";
+cout<<endl;
+return 0;
+}
+
+
+
+import java.util.Scanner;
+public class PyramidPattern {
+ public static void main(String[] args) {
+ Scanner scanner = new Scanner(System.in);
+ System.out.print("Enter the number of rows for the pyramid: ");
+ int numRows = scanner.nextInt();
+ System.out.println("Pyramid Pattern:");
+ printPyramid(numRows);
+ scanner.close();
+ }
+ static void printPyramid(int numRows) {
+ for (int i = 1; i <= numRows; i++) {
+ // Print leading spaces
+ for (int j = 1; j <= numRows - i; j++) {
+ System.out.print(" ");
+ }
+ // Print stars
+ for (int k = 1; k <= 2 * i - 1; k++) {
+ System.out.print("*");
+ }
+ // Move to the next line after each row
+ System.out.println();
+ }
+}
+}
+
+
+
+
+def generate_fibonacci(n):
+ fibonacci_sequence = [0, 1]
+ while len(fibonacci_sequence) < n:
+ next_term = fibonacci_sequence[-1] + fibonacci_sequence[-2]
+ fibonacci_sequence.append(next_term)
+ return fibonacci_sequence
+if __name__ == "__main__":
+ num_terms = int(input("Enter the number of terms for the Fibonacci 
+sequence: "))
+ if num_terms <= 0:
+ print("Please enter a positive integer.")
+ else:
+ fibonacci_result = generate_fibonacci(num_terms)
+ print("Fibonacci Sequence:", fibonacci_result)
